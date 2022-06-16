@@ -29,7 +29,7 @@ function heartbeat () {
     await initializeWorkers();
 
     httpsServer.listen(3001, () =>
-      console.log('websocket SSL server running on port 443')
+      console.log('websocket SSL server running on port 3001')
     );
   } catch (error) {
     console.error('Failed to initialize workers [error:%o]', error);
