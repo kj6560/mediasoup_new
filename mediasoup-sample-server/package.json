@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --config public/webpack.config.js",
+    "public-dev": "webpack-dev-server --config public/webpack.config.js",
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mediasoup": "^3.5.5",
+    "mediasoup-client": "^3.5.5",
+    "uuid": "^7.0.2",
+    "ws": "^7.2.3"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "sinon": "^9.0.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
