@@ -4,13 +4,13 @@ const WebSocket = require('ws');
 
 const { handleSocket } = require('./socket');
 const { initializeWorkers } = require('./worker');
+const options = {
+  key: fs.readFileSync(path.join(__dirname, config.sslKey), 'utf-8'),
+  cert: fs.readFileSync(path.join(__dirname, config.sslCrt), 'utf-8')
+}
 
-const HTTPS_OPTIONS = Object.freeze({
-  cert: '../../../../../letsencrypt/live/drrksuri.com/cert.pem',
-  key: '../../../../../letsencrypt/live/drrksuri.com/privkey.pem'
-});
 
-const httpsServer = https.createServer(HTTPS_OPTIONS);
+const httpsServer = https.createServer(options);
 
 const wss = new WebSocket.Server({
   maxPayload: 200000000,
