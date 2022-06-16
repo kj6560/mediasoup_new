@@ -6,8 +6,8 @@ const config = require('./config')
 const { handleSocket } = require('./socket');
 const { initializeWorkers } = require('./worker');
 const options = {
-  key: fs.readFileSync(path.join(__dirname, config.sslKey), 'utf-8'),
-  cert: fs.readFileSync(path.join(__dirname, config.sslCrt), 'utf-8')
+  key: fs.readFileSync('../../../../../etc/letsencrypt/live/drrksuri.com/privkey.pem', 'utf-8'),
+  cert: fs.readFileSync('../../../../../etc/letsencrypt/live/drrksuri.com/cert.pem', 'utf-8')
 }
 
 
