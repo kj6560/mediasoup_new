@@ -1,7 +1,7 @@
 const fs = require('fs');
 const https = require('https');
 const WebSocket = require('ws');
-
+const path = require('path')
 const { handleSocket } = require('./socket');
 const { initializeWorkers } = require('./worker');
 const options = {
